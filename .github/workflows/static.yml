@@ -25,7 +25,7 @@ jobs:
         run: |
           mkdir -p _site
           for archive in site-part-*.zip; do
-            unzip -q "$archive" -d _site
+            unzip -oq "$archive" -d _site
           done
           test -f _site/index.html
           touch _site/.nojekyll
